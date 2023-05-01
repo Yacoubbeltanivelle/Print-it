@@ -1,10 +1,4 @@
-// document.getElementById("fleche-left").addEventListener("click", function () {
-//   alert("Fleche gauche");
-// });
-// document.getElementById("fleche-right").addEventListener("click", function () {
-//   alert("Fleche droite");
-// });
-
+// Liste des images slide
 const slides = [
   {
     image: "slide1.jpg",
@@ -26,16 +20,16 @@ const slides = [
 ];
 
 
-let IndexActuel = 0; // commencer avec la première slide
+let IndexActuel = 0; // variable de repere, commencer avec la première slide
 
 let bannerImg = document.getElementById("banner-img");
 let bannerText = document.querySelector("#banner p");
 let dots = document.querySelectorAll(".dot");
 
+// Fonction qui va changer les contenues
 function changementSlide() {
   bannerImg.src = "./assets/images/slideshow/" + slides[IndexActuel].image;
   bannerText.innerHTML = slides[IndexActuel].tagLine;
-  // alert(slides[IndexActuel].image);
 
   // mettre à jour les classes des points
   for (let i = 0; i < dots.length; i++) { // Parcourt la liste des balises Dot supprime et remplace Dot_selected
